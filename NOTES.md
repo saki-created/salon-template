@@ -1,12 +1,18 @@
 # LP制作メモ ②（Notion無料テンプレ配布LP）
 
-最終更新：2026-07-23 ／ ステータス：**LP完成・未公開**
+最終更新：2026-07-24 ／ ステータス：**公開済み**
+
+## 公開URL
+- 本番：https://salon-template-gamma.vercel.app
+- GitHub：https://github.com/saki-created/salon-template
+- Vercel：アカウント saki12 ／ プロジェクト salon-template
+- 更新方法：index.html を直して git push origin main（URLは変わらない）
 
 ## つづきのメモ（次回ここから）
-- [ ] index.html を実物で確認（ダブルクリックで開く）
-- [ ] 直したいところがあれば修正
-- [ ] GitHubに新しい倉庫を作る → Vercelに登録して公開
-      ※ Vercel側でのボタン操作はサキさんにお願いする（前回と同じ流れ）
+- [x] スマホ幅でセルフチェック（自己採点9点）
+- [x] GitHub倉庫作成 → Vercelで公開
+- [ ] URLの `gamma` 部分を saki-salon-template などに変更（任意）
+- [ ] OGP画像を LP①からの流用ではなく、このLP専用のものに差し替え（任意）
 
 ## このLPの内容
 
