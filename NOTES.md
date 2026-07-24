@@ -3,7 +3,8 @@
 最終更新：2026-07-24 ／ ステータス：**公開済み**
 
 ## 公開URL
-- 本番：https://salon-template-gamma.vercel.app
+- 本番：https://saki-salon-template.vercel.app  ← これを使う
+- 旧URL：https://salon-template-gamma.vercel.app （新URLへ307転送）
 - GitHub：https://github.com/saki-created/salon-template
 - Vercel：アカウント saki12 ／ プロジェクト salon-template
 - 更新方法：index.html を直して git push origin main（URLは変わらない）
@@ -11,7 +12,7 @@
 ## つづきのメモ（次回ここから）
 - [x] スマホ幅でセルフチェック（自己採点9点）
 - [x] GitHub倉庫作成 → Vercelで公開
-- [ ] URLの `gamma` 部分を saki-salon-template などに変更（任意）
+- [x] URLを saki-salon-template.vercel.app に変更済み
 - [ ] OGP画像を LP①からの流用ではなく、このLP専用のものに差し替え（任意）
 
 ## このLPの内容
