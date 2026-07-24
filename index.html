@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【無料】1人サロン管理テンプレ｜サキ｜1人サロンの『うら側整え屋』</title>
+<meta name="description" content="売上はExcel、カルテは紙、予約はサイト。バラバラの管理をNotionでひとつに。開業タイムライン・カルテ・書類・顧客管理データベースの無料サンプルをお配りしています。">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="【無料】1人サロン管理テンプレ｜バラバラの管理を、ひとつに。">
+<meta property="og:description" content="売上はExcel、カルテは紙、予約はサイト。それ、ぜんぶNotionにまとめました。無料サンプルを配布中です。">
+<meta property="og:image" content="images/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="images/icon.png">
+<link rel="apple-touch-icon" href="images/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --base:#FCF8F4;
+  --beige:#EFE5DA;
+  --pink:#C99A96;
+  --pink-soft:#F3E3E0;
+  --accent:#A82C5E;
+  --ink:#463B36;
+  --ink-soft:#6E625C;
+  --mincho:"Zen Old Mincho",serif;
+  --gothic:"Zen Kaku Gothic New",sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--base);color:var(--ink);
+  font-family:var(--gothic);font-size:16px;line-height:2;letter-spacing:.04em;
+  overflow-x:hidden;-webkit-text-size-adjust:100%;
+}
+img{max-width:100%;height:auto;display:block;}
+.wrap{width:100%;max-width:720px;margin:0 auto;padding:0 24px;}
+section{padding:80px 0;}
+.sec-beige{background:var(--beige);}
+.sec-pink{background:var(--pink-soft);}
+
+h2{font-family:var(--mincho);font-size:24px;line-height:1.75;font-weight:500;margin:0 0 40px;text-align:center;letter-spacing:.01em;}
+h2 .en{display:block;font-family:var(--gothic);font-size:11px;letter-spacing:.3em;color:var(--pink);margin-bottom:12px;}
+h3{font-family:var(--mincho);font-size:18px;line-height:1.7;font-weight:500;margin:0 0 10px;}
+p{margin:0 0 1.4em;}
+p:last-child{margin-bottom:0;}
+
+@keyframes rise{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+.rise{animation:rise .9s both;}
+.d1{animation-delay:.15s;}.d2{animation-delay:.3s;}.d3{animation-delay:.45s;}.d4{animation-delay:.6s;}
+@media(prefers-reduced-motion:reduce){.rise{animation:none;}}
+
+/* ヘッダー */
+header{position:sticky;top:0;z-index:50;background:rgba(252,248,244,.92);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid rgba(201,154,150,.25);}
+.header-in{max-width:720px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:10px;}
+.avatar{width:36px;height:36px;border-radius:50%;flex:0 0 36px;overflow:hidden;background:var(--pink-soft);}
+.avatar img{width:100%;height:100%;object-fit:cover;}
+.brand{line-height:1.35;min-width:0;}
+.brand b{display:block;font-family:var(--mincho);font-size:14px;font-weight:500;}
+.brand span{display:block;font-size:10px;color:var(--ink-soft);letter-spacing:.06em;}
+.header-btn{margin-left:auto;flex:0 0 auto;background:var(--accent);color:#fff;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.05em;padding:9px 14px;border-radius:999px;white-space:nowrap;}
+
+/* ヒーロー */
+.hero{position:relative;min-height:calc(100svh - 57px);display:flex;align-items:center;justify-content:center;text-align:center;padding:56px 24px;overflow:hidden;}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(60% 45% at 78% 12%,rgba(243,227,224,.95),transparent 70%),
+    radial-gradient(65% 50% at 12% 88%,rgba(239,229,218,.9),transparent 72%),
+    linear-gradient(165deg,#FDFAF7 0%,#F7EFE9 55%,#F3E7E2 100%);
+}
+.hero-in{position:relative;z-index:1;max-width:560px;}
+.free-badge{
+  display:inline-block;background:var(--accent);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:.16em;
+  padding:7px 18px;border-radius:999px;margin:0 0 26px;
+}
+.hero h1{font-family:var(--mincho);font-size:25px;line-height:1.9;font-weight:500;margin:0 0 22px;letter-spacing:.01em;}
+.hero h1 em{font-style:normal;color:var(--accent);}
+.hero-sub{font-size:14px;line-height:2.1;color:var(--ink-soft);margin:0 0 34px;}
+.scroll-hint{margin-top:34px;font-size:10px;letter-spacing:.25em;color:var(--pink);}
+.scroll-hint::after{content:"";display:block;width:1px;height:34px;margin:10px auto 0;background:linear-gradient(var(--pink),transparent);}
+
+/* ボタン */
+.cta{display:block;width:100%;max-width:400px;margin:0 auto;background:var(--accent);color:#fff;text-decoration:none;text-align:center;font-weight:700;font-size:16px;letter-spacing:.04em;padding:20px;border-radius:999px;box-shadow:0 8px 20px rgba(168,44,94,.20);}
+.cta small{display:block;font-size:11px;font-weight:400;opacity:.9;margin-top:4px;letter-spacing:.08em;}
+.cta-note{text-align:center;font-size:12px;color:var(--ink-soft);margin:14px 0 0;}
+.cta-sub{display:block;width:100%;max-width:400px;margin:16px auto 0;border:1px solid var(--pink);color:var(--pink);text-decoration:none;text-align:center;font-size:13px;font-weight:500;padding:14px;border-radius:999px;}
+
+/* バラバラ図 */
+.scatter{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 28px;}
+.scatter div{
+  background:#fff;border-radius:14px;padding:18px 14px;text-align:center;
+  font-size:13px;line-height:1.7;box-shadow:0 2px 10px rgba(70,59,54,.05);
+}
+.scatter div b{display:block;font-family:var(--mincho);font-size:15px;font-weight:500;margin-bottom:4px;}
+.scatter div span{font-size:11px;color:var(--ink-soft);}
+.arrow-down{text-align:center;color:var(--pink);font-size:22px;line-height:1;margin:0 0 22px;}
+.merged{
+  background:var(--ink);color:#fff;border-radius:16px;padding:28px 20px;text-align:center;
+}
+.merged b{display:block;font-family:var(--mincho);font-size:20px;font-weight:500;margin-bottom:6px;}
+.merged span{font-size:12px;opacity:.75;}
+
+/* もらえるもの */
+.gifts{display:grid;gap:14px;margin-bottom:36px;}
+.gift{background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(201,154,150,.28);position:relative;padding-left:60px;}
+.gift::before{
+  content:"✓";position:absolute;left:22px;top:24px;
+  color:#fff;background:var(--accent);width:24px;height:24px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:12px;
+}
+.gift p{font-size:13px;line-height:1.9;color:var(--ink-soft);margin:0;}
+
+/* 一撃 */
+.punch{background:var(--ink);color:#F7F1EC;text-align:center;padding:80px 24px;}
+.punch p{font-size:15px;line-height:2.2;opacity:.85;margin-bottom:1.6em;}
+.punch strong{display:block;font-family:var(--mincho);font-weight:500;font-size:22px;line-height:2;color:#fff;margin-bottom:.6em;letter-spacing:.01em;}
+.punch .mag{color:#E894B2;}
+
+/* プロフィール */
+.profile{background:#fff;border-radius:20px;padding:40px 26px;border:1px solid rgba(201,154,150,.28);}
+.profile .avatar-lg{width:108px;height:108px;border-radius:50%;margin:0 auto 20px;overflow:hidden;background:var(--pink-soft);}
+.profile .avatar-lg img{width:100%;height:100%;object-fit:cover;}
+.profile .name{font-family:var(--mincho);font-size:20px;margin:0 0 4px;text-align:center;}
+.profile .role{font-size:12px;color:var(--pink);letter-spacing:.1em;margin:0 0 24px;text-align:center;}
+.profile p{font-size:14px;line-height:2.1;color:var(--ink-soft);}
+.years{display:flex;align-items:baseline;justify-content:center;gap:6px;margin:0 0 24px;}
+.years b{font-family:var(--mincho);font-size:56px;line-height:1;color:var(--accent);font-weight:500;}
+.years span{font-size:13px;color:var(--ink-soft);}
+
+/* FAQ */
+details{background:#fff;border-radius:14px;margin-bottom:12px;border:1px solid rgba(201,154,150,.28);overflow:hidden;}
+summary{cursor:pointer;list-style:none;padding:20px 48px 20px 22px;font-size:15px;font-weight:500;position:relative;line-height:1.7;}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"＋";position:absolute;right:20px;top:20px;color:var(--pink);}
+details[open] summary::after{content:"−";}
+details .body{padding:0 22px 22px;font-size:14px;line-height:2;color:var(--ink-soft);}
+
+.final{text-align:center;}
+.final .lead{font-size:14px;line-height:2.1;color:var(--ink-soft);margin-bottom:36px;}
+
+footer{background:var(--ink);color:#CFC3BC;text-align:center;padding:44px 24px;font-size:12px;line-height:2;}
+footer .links{margin-bottom:18px;}
+footer a{color:#F0E4DE;text-decoration:none;margin:0 12px;font-size:13px;}
+footer .copy{font-size:11px;opacity:.6;letter-spacing:.08em;}
+
+@media(min-width:768px){
+  body{font-size:17px;}
+  section{padding:110px 0;}
+  h2{font-size:30px;}
+  .hero h1{font-size:34px;}
+  .hero-sub{font-size:15px;}
+  .punch strong{font-size:28px;}
+  .scatter{grid-template-columns:repeat(4,1fr);}
+  .gifts{grid-template-columns:1fr 1fr;}
+  .profile{padding:56px 48px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-in">
+    <div class="avatar"><img src="images/icon.png" alt="サキ"></div>
+    <div class="brand">
+      <b>サキ</b>
+      <span>1人サロンの『うら側整え屋』</span>
+    </div>
+    <a class="header-btn" href="https://note.com/saki_created/n/n6c58b3b7ea5d" target="_blank" rel="noopener">無料で受け取る</a>
+  </div>
+</header>
+
+<!-- ヒーロー -->
+<div class="hero">
+  <div class="hero-in">
+    <p class="free-badge rise">無料サンプル配布中</p>
+    <h1 class="rise d1">売上はExcel、カルテは紙、<br>予約はサイト。<br><em>ぜんぶ、バラバラ。</em></h1>
+    <p class="hero-sub rise d2">
+      1人サロンの管理を、Notionでひとつに。<br>
+      使えるテンプレートを、<br>無料でお配りしています。
+    </p>
+    <a class="cta rise d3" href="https://note.com/saki_created/n/n6c58b3b7ea5d" target="_blank" rel="noopener">
+      無料テンプレートを受け取る
+      <small>1人サロン管理テンプレ ／ note</small>
+    </a>
+    <p class="scroll-hint rise d4">SCROLL</p>
+  </div>
+</div>
+
+<!-- 課題 -->
+<section>
+  <div class="wrap">
+    <h2><span class="en">PROBLEM</span>「どこに何があるか、<br>わからない」</h2>
+    <p style="text-align:center;font-size:15px;margin-bottom:34px;">
+      1人サロンの管理って、<br>どうしていますか？
+    </p>
+
+    <div class="scatter">
+      <div><b>売上</b><span>Excel</span></div>
+      <div><b>カルテ</b><span>紙</span></div>
+      <div><b>予約</b><span>予約サイト</span></div>
+      <div><b>顧客</b><span>頭の中</span></div>
+    </div>
+
+    <p class="arrow-down">↓</p>
+
+    <div class="merged">
+      <b>ぜんぶ、ここに。</b>
+      <span>顧客・売上・カルテを、Notionでひとつに</span>
+    </div>
+  </div>
+</section>
+
+<!-- 一撃 -->
+<div class="punch">
+  <p>会社員のときは、売上を出せていた。<br>それなのに、独立したら結果が出ない。</p>
+  <strong>そう悩むオーナーさんは、<br><span class="mag">とても多い</span>です。</strong>
+  <p style="margin-top:1.6em;">
+    美容業界の廃業率が高い理由のひとつは、<br>
+    技術ではなく「管理」だと思っています。<br>
+    会社にいた頃は、はじめから整った場所で<br>
+    働かせてもらっていたから。
+  </p>
+</div>
+
+<!-- もらえるもの -->
+<section class="sec-beige">
+  <div class="wrap">
+    <h2><span class="en">FREE SAMPLE</span>無料でお渡しするもの</h2>
+    <div class="gifts">
+      <div class="gift">
+        <h3>開業タイムライン</h3>
+        <p>いつ、何を準備すればいいか。開業までの流れが一本の線で見えます。</p>
+      </div>
+      <div class="gift">
+        <h3>カルテテンプレート</h3>
+        <p>紙のカルテを、探さなくていい形に。お客様の記録がすぐ引き出せます。</p>
+      </div>
+      <div class="gift">
+        <h3>書類テンプレート</h3>
+        <p>毎回ゼロから作らなくていいように。必要な書式をまとめました。</p>
+      </div>
+      <div class="gift">
+        <h3>顧客管理データベース<br>（簡易版）</h3>
+        <p>お客様の情報を一か所に。誰が、いつ、何を受けたかが一覧になります。</p>
+      </div>
+    </div>
+    <a class="cta" href="https://note.com/saki_created/n/n6c58b3b7ea5d" target="_blank" rel="noopener">
+      無料テンプレートを受け取る
+      <small>noteの記事からダウンロードできます</small>
+    </a>
+  </div>
+</section>
+
+<!-- プロフィール -->
+<section>
+  <div class="wrap">
+    <h2><span class="en">PROFILE</span>作った人</h2>
+    <div class="profile">
+      <div class="avatar-lg"><img src="images/icon.png" alt="サキ"></div>
+      <p class="name">サキ</p>
+      <p class="role">1人サロンの『うら側整え屋』</p>
+
+      <div class="years"><b>18</b><span>年、エステの現場にいます</span></div>
+
+      <p>
+        私はサロンのオーナーではありません。<br>
+        現場で施術をしながら、<strong>お店の「うら側」の管理を任されてきた立場</strong>です。
+      </p>
+      <p>
+        正直に言うと、私も長いあいだ同じでした。<br>
+        会社員だったので、はじめから整った場所で働かせてもらっていたんです。
+      </p>
+      <p>
+        私も、ゆくゆくは独立を目指しています。<br>
+        だからこれは、上から教えるためのものではなく、<strong>自分のために本気で作ったもの</strong>です。
+      </p>
+      <p>
+        使ってみて「こんな機能がほしい」「ここが使いにくい」があれば、<br>
+        ぜひ教えてください。本当に、参考にしています。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec-pink">
+  <div class="wrap">
+    <h2><span class="en">Q &amp; A</span>受け取る前に、<br>気になること</h2>
+
+    <details>
+      <summary>本当に無料ですか？</summary>
+      <div class="body">はい、無料です。noteの記事からそのまま受け取っていただけます。まずは使ってみて、感想をいただけたら嬉しいです。</div>
+    </details>
+
+    <details>
+      <summary>Notionを使ったことがありません。</summary>
+      <div class="body">大丈夫です。無料で使えるアプリで、テンプレートはもう形になっているので、開いて上から書き込んでいくだけです。むずかしい設定はいりません。</div>
+    </details>
+
+    <details>
+      <summary>まだ開業していないのですが、使えますか？</summary>
+      <div class="body">はい。むしろ開業前の方に「開業タイムライン」を見ていただきたいです。散らかる前に置き場所を決めておくほうが、あとがずっと楽になります。</div>
+    </details>
+
+    <details>
+      <summary>パソコンが苦手でも大丈夫？</summary>
+      <div class="body">スマホからも使えます。今のExcelや紙の管理より、探す時間は確実に減るはずです。まずはサンプルで、感触だけ確かめてみてください。</div>
+    </details>
+  </div>
+</section>
+
+<!-- 最後 -->
+<section class="final">
+  <div class="wrap">
+    <h2><span class="en">LAST</span>「どこに何があるか」を、<br>もう探さなくていい。</h2>
+    <p class="lead">
+      全部をいっぺんに整えなくて大丈夫です。<br>
+      まずは無料のサンプルから。<br>
+      合わなければ、使うのをやめても大丈夫です。
+    </p>
+    <a class="cta" href="https://note.com/saki_created/n/n6c58b3b7ea5d" target="_blank" rel="noopener">
+      無料テンプレートを受け取る
+      <small>【無料サンプル】1人サロン管理テンプレ</small>
+    </a>
+    <p class="cta-note">※ noteのページが開きます</p>
+    <a class="cta-sub" href="https://www.threads.com/@saki.created_aesth" target="_blank" rel="noopener">
+      Threadsで、日々の気づきも届けています
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="links">
+    <a href="https://note.com/saki_created/n/n6c58b3b7ea5d" target="_blank" rel="noopener">note</a>
+    <a href="https://www.threads.com/@saki.created_aesth" target="_blank" rel="noopener">Threads</a>
+  </div>
+  <p class="copy">&copy; 2026 サキ｜1人サロンの『うら側整え屋』</p>
+</footer>
+
+</body>
+</html>
